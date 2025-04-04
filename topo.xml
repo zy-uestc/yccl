@@ -1,0 +1,38 @@
+<system version="1">
+  <cpu host_hash="0x392d9598e39e6a8f" numaid="0" affinity="5555,55555555,55555555" arch="x86_64" vendor="GenuineIntel" familyid="6" modelid="85">
+    <pci busid="0000:18:00.0" class="0x020000" vendor="0x14e4" device="0x16d8" subsystem_vendor="0x1028" subsystem_device="0x07e5" link_speed="8.0 GT/s PCIe" link_width="4">
+      <nic>
+        <net name="eno1np0" dev="0" speed="1000" port="0" latency="0.000000" guid="0x0" maxconn="65536" gdr="0"/>
+      </nic>
+    </pci>
+    <pci busid="0000:18:00.1" class="0x020000" vendor="0x14e4" device="0x16d8" subsystem_vendor="0x1028" subsystem_device="0x07e5" link_speed="8.0 GT/s PCIe" link_width="4">
+      <nic>
+        <net name="eno2np1" dev="1" speed="1000" port="0" latency="0.000000" guid="0x1" maxconn="65536" gdr="0"/>
+      </nic>
+    </pci>
+    <pci busid="0000:3b:00.0" class="0x030000" vendor="0x10de" device="0x2230" subsystem_vendor="0x10de" subsystem_device="0x1459" link_speed="8.0 GT/s PCIe" link_width="16">
+      <gpu dev="0" sm="86" rank="0" gdr="1"/>
+    </pci>
+    <nic>
+      <net name="br-3c276cd5dbc3" dev="2" speed="10000" port="0" latency="0.000000" guid="0x2" maxconn="65536" gdr="0"/>
+      <net name="br-a6624809a36c" dev="3" speed="10000" port="0" latency="0.000000" guid="0x3" maxconn="65536" gdr="0"/>
+      <net name="veth268d912" dev="4" speed="10000" port="0" latency="0.000000" guid="0x4" maxconn="65536" gdr="0"/>
+      <net name="vethd39693d" dev="5" speed="10000" port="0" latency="0.000000" guid="0x5" maxconn="65536" gdr="0"/>
+      <net name="vethedf9548" dev="6" speed="10000" port="0" latency="0.000000" guid="0x6" maxconn="65536" gdr="0"/>
+      <net name="veth38f779e" dev="7" speed="10000" port="0" latency="0.000000" guid="0x7" maxconn="65536" gdr="0"/>
+      <net name="veth5c042a3" dev="8" speed="10000" port="0" latency="0.000000" guid="0x8" maxconn="65536" gdr="0"/>
+      <net name="vethe6e34fe" dev="9" speed="10000" port="0" latency="0.000000" guid="0x9" maxconn="65536" gdr="0"/>
+    </nic>
+    <pci busid="0000:5e:00.0" class="0x030000" vendor="0x10de" device="0x2230" subsystem_vendor="0x10de" subsystem_device="0x1459" link_speed="8.0 GT/s PCIe" link_width="16">
+      <gpu dev="1" sm="86" rank="1" gdr="1"/>
+    </pci>
+  </cpu>
+  <cpu host_hash="0x392d9598e39e6a8f" numaid="1" affinity="aaaa,aaaaaaaa,aaaaaaaa" arch="x86_64" vendor="GenuineIntel" familyid="6" modelid="85">
+    <pci busid="0000:b1:00.0" class="0x030000" vendor="0x10de" device="0x2230" subsystem_vendor="0x10de" subsystem_device="0x1459" link_speed="8.0 GT/s PCIe" link_width="16">
+      <gpu dev="2" sm="86" rank="2" gdr="1"/>
+    </pci>
+    <pci busid="0000:d9:00.0" class="0x030000" vendor="0x10de" device="0x2230" subsystem_vendor="0x10de" subsystem_device="0x1459" link_speed="8.0 GT/s PCIe" link_width="16">
+      <gpu dev="3" sm="86" rank="3" gdr="1"/>
+    </pci>
+  </cpu>
+</system>
