@@ -929,8 +929,8 @@ static ncclResult_t mergePCIERingGraph(struct ncclComm* comm, struct ncclTopoGra
   // 合并 inter 数组
   {
       // 定义合并参数（inter 是 int64_t 类型）
-      const int srcValidElements = newChannels * comm->nRanks;
-      const int destStart = originalChannels * comm->nRanks;
+      const int srcValidElements = newChannels * 2;
+      const int destStart = originalChannels * 2;
       const int interTotalElements = MAXCHANNELS * 2; // inter 数组总容量（假设每个通道固定2元素）
 
       // 1. 检查越界
