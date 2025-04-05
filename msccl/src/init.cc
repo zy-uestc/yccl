@@ -915,15 +915,6 @@ static ncclResult_t mergePCIERingGraph(struct ncclComm* comm, struct ncclTopoGra
           srcValidElements * sizeof(int)
       );
 
-      // // 3. 填充剩余位置为0
-      // const int totalIntraAfterMerge = destStart + srcValidElements;
-      // if (totalIntraAfterMerge < intraTotalElements) {
-      //     memset(
-      //         &ringGraph->intra[totalIntraAfterMerge],
-      //         0,
-      //         (intraTotalElements - totalIntraAfterMerge) * sizeof(int)
-      //     );
-      // }
   }
 
   // 合并 inter 数组
@@ -947,15 +938,6 @@ static ncclResult_t mergePCIERingGraph(struct ncclComm* comm, struct ncclTopoGra
           srcValidElements * sizeof(int64_t)
       );
 
-      // // 3. 填充剩余位置为0
-      // const int totalInterAfterMerge = destStart + srcValidElements;
-      // if (totalInterAfterMerge < interTotalElements) {
-      //     memset(
-      //         &ringGraph->inter[totalInterAfterMerge],
-      //         0,
-      //         (interTotalElements - totalInterAfterMerge) * sizeof(int64_t)
-      //     );
-      // }
   }
 
   // 更新通道数
@@ -1168,7 +1150,7 @@ static ncclResult_t initTransportsRank(struct ncclComm* comm, struct ncclComm* p
   
 
   //PCIE
-  NCCLCHECKGOTO(mergePCIERingGraph(comm, ringGraph), ret, fail);
+  // NCCLCHECKGOTO(mergePCIERingGraph(comm, ringGraph), ret, fail);
 
   printAllTopoPaths(comm->topoPCIE);
   printIntraPaths(ringGraph);

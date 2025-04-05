@@ -35,14 +35,14 @@ ncclResult_t ncclBuildRings(int nrings, int* rings, int rank, int nranks, int* p
 
     int current = rank;
     for (int r=0; r<nrings; r++) {
-      printf("+++++++++++++++++++++++++++++++Ring %d next: ", r);
+      // printf("+++++++++++++++++++++++++++++++Ring %d next: ", r);
       for (int i=0; i<nranks; i++) printf("%d ", next[r*nranks+i]);
       printf("\n");
     }
     for (int i=0; i<nranks; i++) {
       rings[r*nranks+i] = current;
       current = next[r*nranks+current];
-      printf("==================rings[r*nranks+i]:%d,current:%d\n",rings[r*nranks+i],current);
+      // printf("==================rings[r*nranks+i]:%d,current:%d\n",rings[r*nranks+i],current);
     }
     snprintf(prefix, sizeof(prefix), "Channel %02d/%02d :", r, nrings);
     if (rank == 0) dumpLine(rings+r*nranks, nranks, prefix);

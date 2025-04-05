@@ -579,8 +579,8 @@ ncclResult_t ncclTopoCheckNet(struct ncclTopoSystem* system, int rank1, int rank
     path = gpu2->paths[NET]+n;
     if (path->type <= PATH_PXB && path->bw > netSpeed2) netSpeed2 = path->bw;
   }
-
-  if (netSpeed1 > speed && netSpeed2 > speed) return ncclSuccess;
+  // printf("=============speed:%f,netSpeed1:%f,netSpeed2:%f================\n",speed,netSpeed1,netSpeed2);
+  if (netSpeed1 > speed && netSpeed2 > speed) return ncclSuccess; //当机外带宽大于机内带宽才会采用net模式
   *net = 0;
   return ncclSuccess;
 }
