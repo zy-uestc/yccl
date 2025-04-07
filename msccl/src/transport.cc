@@ -144,7 +144,7 @@ ncclResult_t ncclTransportP2pSetup(struct ncclComm* comm, struct ncclTopoGraph* 
     TIME_START(0);
     for (int c=0; c<MAXCHANNELS; c++) {
       if (recvMask & (1UL<<c)) {
-        if (c<1){//对于Channelid小于1的Channel都降为SHM
+        if (c<MAXCHANNELS){//对于Channelid小于1的Channel都降为SHM
           NCCLCHECKGOTO(selectTransport<0>(comm, graph, recvData[p]+recvChannels++, c, recvPeer, connIndex, &type, &proxy,1), ret, fail);
           // countForSHMSend--;
         }else{
@@ -158,7 +158,7 @@ ncclResult_t ncclTransportP2pSetup(struct ncclComm* comm, struct ncclTopoGraph* 
     sendData[p] = recvData[p]+recvChannels;
     for (int c=0; c<MAXCHANNELS; c++) {
       if (sendMask & (1UL<<c)) {
-        if (c<1){//对于Channelid小于1的Channel都降为SHM
+        if (c<MAXCHANNELS){//对于Channelid小于1的Channel都降为SHM
           NCCLCHECKGOTO(selectTransport<1>(comm, graph, sendData[p]+sendChannels++, c, sendPeer, connIndex, &type, &proxy,1), ret, fail);
         }else{
           NCCLCHECKGOTO(selectTransport<1>(comm, graph, sendData[p]+sendChannels++, c, sendPeer, connIndex, &type, &proxy,0), ret, fail);
