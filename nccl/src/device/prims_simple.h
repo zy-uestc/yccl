@@ -116,7 +116,7 @@ class Primitives<
       int spins = 0;
       mon_counter=0;
       while (connStepCache + (isSendNotRecv ? NCCL_STEPS : 0) < step + StepPerSlice) {
-        if (Send){
+        if (Send && ncclShmem.channelId==0){
           mon_counter++;
           // printf("==tid=%d====connStepCache=%llu==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=%llu======step=%llu=====StepPerSlice=%d====PeerIndex=%d====srcIx=%ld====dstIx=%ld==\n",tid,connStepCache,connStepCache + (isSendNotRecv ? NCCL_STEPS : 0),step,StepPerSlice,index,srcIx,dstIx);
         }
@@ -124,10 +124,11 @@ class Primitives<
         if (checkAbort(flags, Aborted, spins)) break;
         //if (spins == 0) printf("r=%d b=%d t=%d SPUN OUT got=%d want=%d\n", ncclShmem.comm.rank, blockIdx.x, threadIdx.x, int(connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)), int(step+StepPerSlice));
       }
-      if (Send){
-        if (mon_counter>10){
-          printf("congestion Channel=%d Peer=%d mon_counter=%d \n",ncclShmem.channelId,index,mon_counter);
+      if (Send && ncclShmem.channelId==0){
+        if (mon_counter>20){
+          printf("conjestion tid=%d,channelid=%d,mon_counter=%d,ncclShmem.comm.rank=%d\n",tid,ncclShmem.channelId,mon_counter,ncclShmem.comm.rank);
         }
+        // printf("conjestion tid=%d,channelid=%d,mon_counter=%d\n",tid,ncclShmem.channelId,mon_counter);
       }
     }
 
@@ -206,6 +207,9 @@ class Primitives<
     sliceSize = max(divUp(nelem, 16*SlicePerChunk)*16, sliceSize/32);
     int slice = 0;
     int offset = 0;
+    
+    unsigned long long start_time = clock64();
+  
 
     if (tid < nworkers && offset < nelem && !isNetOffload) {
       // Worker-only loop for non-empty slices. Non-workers and empty slices are
@@ -280,6 +284,9 @@ class Primitives<
                1, ncclShmem.groups[group].srcs,
                fan.nsend(), ncclShmem.groups[group].dsts+1,
                workSize);
+            if (tid ==0 && Send &&ncclShmem.comm.rank==0){
+              atomicAdd(&ncclShmem.bytesSent[ncclShmem.channelId], workSize*sizeof(T));
+            }
           }
         } else if (DirectSend && !DirectRecv && SrcBuf != Input && ncclShmem.groups[group].dsts[Dst] == nullptr) {
           // For broadcast in CollNet to do empty send
@@ -288,6 +295,9 @@ class Primitives<
              Recv, ncclShmem.groups[group].srcs,
              Dst, ncclShmem.groups[group].dsts,
              workSize);
+          if (tid ==0 && Send &&ncclShmem.comm.rank==0){
+            atomicAdd(&ncclShmem.bytesSent[ncclShmem.channelId], workSize*sizeof(T));
+          }
         } else if (ncclShmem.groups[group].srcs[0] && ncclShmem.groups[group].dsts[0]) {
           constexpr int PreOpSrcs = SrcBuf != Input ? 0 :
                                     DirectRecv*MaxRecv == NCCL_MAX_DIRECT_ARITY ? (1+NCCL_MAX_DIRECT_ARITY) : 1;
@@ -300,6 +310,9 @@ class Primitives<
                 Recv * fan.nrecv() + Src, ncclShmem.groups[group].srcs,
                 1, ncclShmem.groups[group].dsts,
                 workSize);
+            if (tid ==0 &&Send &&ncclShmem.comm.rank==0){
+              atomicAdd(&ncclShmem.bytesSent[ncclShmem.channelId], workSize*sizeof(T));
+            }
           } else {
             reduceCopy<Unroll, RedOp, T,
               MultimemSrcs, Recv + Src, Recv * MaxRecv + Src,
@@ -308,6 +321,9 @@ class Primitives<
                 Recv * fan.nrecv() + Src, ncclShmem.groups[group].srcs,
                 Send * fan.nsend() + Dst, ncclShmem.groups[group].dsts,
                 workSize);
+            if (tid ==0 && Send &&ncclShmem.comm.rank==0){
+              atomicAdd(&ncclShmem.bytesSent[ncclShmem.channelId], workSize*sizeof(T));
+            }
           }
         } else {
           // we will come here when calling prims.directSend with net peer,
@@ -352,6 +368,27 @@ class Primitives<
       postPeer<Recv, Send>(0 < workSize);
       offset += sliceSize;
       slice += 1;
+    }
+
+    if (tid==0 && ncclShmem.comm.rank==0 ){
+      unsigned long long end_time = clock64();
+      unsigned long long elapsed_cycles = end_time - start_time;
+      double elapsed_s = (double)elapsed_cycles / (1.8*1e9);
+      unsigned long long bytesSent = ncclShmem.bytesSent[ncclShmem.channelId];
+      double rateGBs = (bytesSent / 1e9) / elapsed_s;
+      // ncclShmem.totalSendTime[ncclShmem.channelId] += elapsed_s*1e3;
+      printf("[time %llu] [GPU %d][Channel %d][Send %d Recv %d][peers size %lu] Send Rate: %.2f GB/s, Data: %.2f MB, elapsed_s:%.2f ms\n",
+            end_time,
+            ncclShmem.comm.rank,
+            ncclShmem.channelId,
+            Send,
+            Recv,
+            sizeof(ncclShmem.channel.peers),
+            rateGBs,
+            bytesSent / 1e6,
+            elapsed_s*1e3
+            ); // 显示实际发送的GB数
+      atomicExch(&ncclShmem.bytesSent[ncclShmem.channelId], 0ULL);
     }
   }
 

@@ -1,0 +1,1024 @@
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl/src'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+make[2]: Entering directory '/data3/czy/nccl_origin/nccl/src/device'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+Dependencies    build/obj/device/gensrc/sendrecv.cu
+Dependencies    build/obj/device/gensrc/reduce_scatter.cu
+Dependencies    build/obj/device/gensrc/all_gather.cu
+Dependencies    build/obj/device/gensrc/reduce.cu
+Dependencies    build/obj/device/gensrc/broadcast.cu
+Dependencies    build/obj/device/gensrc/all_reduce.cu
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+Compiling       build/obj/device/gensrc/all_gather.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_f8e4m3.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_i32.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_f64.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_i64.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_f32.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_u32.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_bf16.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_f16.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_u8.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_f8e5m2.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_f16.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_f64.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_bf16.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_u32.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_u64.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_bf16.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_u8.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_f16.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_f32.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_f64.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_f8e4m3.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_f8e5m2.cu
+Compiling       build/obj/device/gensrc/all_reduce_minmax_u64.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_u32.cu
+Compiling       build/obj/device/gensrc/all_reduce_premulsum_f32.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_bf16.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_f16.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_u8.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_u32.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_u64.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_f64.cu
+Compiling       build/obj/device/gensrc/all_reduce_prod_u64.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_u8.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_f32.cu
+Compiling       build/obj/device/gensrc/all_reduce_sumpostdiv_u8.cu
+Compiling       build/obj/device/gensrc/all_reduce_sumpostdiv_u32.cu
+Compiling       build/obj/device/gensrc/broadcast.cu
+Compiling       build/obj/device/gensrc/all_reduce_sum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/all_reduce_sumpostdiv_u64.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_f16.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_f32.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_u64.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_f64.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_u32.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_f16.cu
+Compiling       build/obj/device/gensrc/reduce_minmax_u8.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_f32.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_u32.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_f64.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_u64.cu
+Compiling       build/obj/device/gensrc/reduce_premulsum_u8.cu
+Compiling       build/obj/device/gensrc/reduce_prod_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_prod_f32.cu
+Compiling       build/obj/device/gensrc/reduce_prod_f64.cu
+Compiling       build/obj/device/gensrc/reduce_prod_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_prod_u32.cu
+Compiling       build/obj/device/gensrc/reduce_prod_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_prod_u64.cu
+Compiling       build/obj/device/gensrc/reduce_prod_f16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_f16.cu
+Compiling       build/obj/device/gensrc/reduce_prod_u8.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_f32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_f64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_i32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_u32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_u64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_i64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_minmax_u8.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_f32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_f16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_f64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_u64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_u32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_premulsum_u8.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_f16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_f64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_f32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_u64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_u32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_f16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_prod_u8.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_f64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_f32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_u32.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_u64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sumpostdiv_u64.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sum_u8.cu
+Compiling       build/obj/device/gensrc/reduce_sum_bf16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sumpostdiv_u32.cu
+Compiling       build/obj/device/gensrc/reduce_sum_f16.cu
+Compiling       build/obj/device/gensrc/reduce_scatter_sumpostdiv_u8.cu
+Compiling       build/obj/device/gensrc/reduce_sum_f64.cu
+Compiling       build/obj/device/gensrc/reduce_sum_f32.cu
+Compiling       build/obj/device/gensrc/reduce_sum_f8e4m3.cu
+Compiling       build/obj/device/gensrc/reduce_sum_f8e5m2.cu
+Compiling       build/obj/device/gensrc/reduce_sum_u64.cu
+Compiling       build/obj/device/gensrc/reduce_sum_u8.cu
+Compiling       build/obj/device/gensrc/reduce_sum_u32.cu
+Compiling       build/obj/device/gensrc/reduce_sumpostdiv_u64.cu
+Compiling       build/obj/device/gensrc/reduce_sumpostdiv_u32.cu
+Compiling       build/obj/device/gensrc/reduce_sumpostdiv_u8.cu
+Compiling       build/obj/device/gensrc/sendrecv.cu
+make[2]: Leaving directory '/data3/czy/nccl_origin/nccl/src/device'
+Linking    libnccl.so.2.26.2                   > /data3/czy/nccl_origin/nccl/build/lib/libnccl.so.2.26.2
+Archiving  libnccl_static.a                    > /data3/czy/nccl_origin/nccl/build/lib/libnccl_static.a
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl/src'
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl-tests/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl-tests/src'
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl-tests/src'
+===== Round 0 =====
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 5 iters: 1 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 413490 on        lm2 device  0 [0000:5e:00] NVIDIA RTX A6000
+#  Rank  1 Group  0 Pid 413491 on        lm2 device  1 [0000:b1:00] NVIDIA RTX A6000
+#  Rank  2 Group  0 Pid 413492 on        lm2 device  2 [0000:d9:00] NVIDIA RTX A6000
+NCCL version 2.26.2+cuda11.7
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+     1048560         87380     float    none      -1mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=0======step=0=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=13
+mon_counter=13
+==tid=0====connStepCache=2==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=2======step=2=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=2==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=2======step=2=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+[time 3971988090039] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=0, tail=0, step:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=10==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=10======step=10=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=1====connStepCache=6==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=14======step=14=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=10==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=10======step=10=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=1====connStepCache=6==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=14======step=14=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=1
+mon_counter=0
+[time 3971988247887] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=0, tail=2, step:0
+[time 3971988337307] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=0, tail=2,step=0, slice < SlicePerChunk:0
+mon_counter=0
+==tid=1====connStepCache=6==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=14======step=14=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=1====connStepCache=10==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=18======step=18=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+[time 3971988456006] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=0, tail=4, step:2
+mon_counter=0
+mon_counter=0
+[time 3971988614335] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=0, tail=6, step:4
+[time 3971988722387] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=4, tail=6,step=4, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=1====connStepCache=12==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=20======step=20=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=18==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=18======step=18=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+[time 3971988928872] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=8, tail=8, step:8
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=874144====dstIx=874144==
+mon_counter=0
+==tid=0====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=16======step=16=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=1
+mon_counter=1
+mon_counter=3
+==tid=0====connStepCache=18==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=18======step=18=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=18==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=18======step=18=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=18==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=18======step=18=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+[time 3971989059803] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=8, tail=10, step:8
+mon_counter=0
+mon_counter=1
+==tid=1====connStepCache=16==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+[time 3971989144757] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=8, tail=10,step=8, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=8==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=2====PeerIndex=0====srcIx=699040====dstIx=699040==
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=1
+[time 3971989386847] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=12, tail=12, step:10
+mon_counter=0
+mon_counter=0
+==tid=1====connStepCache=18==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=26======step=26=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=2
+==tid=0====connStepCache=26==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=26======step=26=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=24======step=24=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=1====connStepCache=20==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=28======step=28=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=1
+[time 3971989527128] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=14, tail=14, step:12
+[time 3971989629592] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=14, tail=14,step=12, slice < SlicePerChunk:0
+mon_counter=0
+==tid=0====connStepCache=26==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=26======step=26=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=26==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=26======step=26=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=24==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3971989824002] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=16, tail=16, step:16
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=1====connStepCache=26==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=34======step=34=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=32==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=32======step=32=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=1====connStepCache=28==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=36======step=36=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+[time 3971989976810] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=16, tail=18, step:16
+[time 3971990083227] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=18, tail=18,step=16, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3971990199566] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=18, tail=20, step:18
+mon_counter=0
+mon_counter=0
+mon_counter=2
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=34==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=34======step=34=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=34==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=34======step=34=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+[time 3971990339528] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=22, tail=22, step:20
+[time 3971990442530] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=22, tail=22,step=20, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=34==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=34======step=34=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+==tid=1====connStepCache=34==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=42======step=42=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=1
+[time 3971990641043] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=24, tail=24, step:24
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=1====connStepCache=36==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=44======step=44=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=42==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=42======step=42=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+[time 3971990792054] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=24, tail=26, step:24
+[time 3971990892180] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=26, tail=26,step=24, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=40======step=40=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=2
+[time 3971991011964] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=26, tail=28, step:26
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=42==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=42======step=42=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+mon_counter=1
+[time 3971991154447] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=30, tail=30, step:28
+[time 3971991258516] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=30, tail=30,step=28, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=42==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=42======step=42=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=40==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+[time 3971991452328] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=32, tail=32, step:32
+mon_counter=0
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971991599820] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=32, tail=34, step:32
+==tid=1====connStepCache=42==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=50======step=50=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=1
+==tid=1====connStepCache=44==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=52======step=52=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=1
+[time 3971991702106] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=34, tail=34,step=32, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=48======step=48=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=50==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=50======step=50=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=50==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=50======step=50=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+[time 3971991821762] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=34, tail=36, step:34
+mon_counter=0
+mon_counter=0
+[time 3971991963485] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=38, tail=38, step:36
+==tid=0====connStepCache=50==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=50======step=50=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=48==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=1
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=1====connStepCache=50==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=58======step=58=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3971992066832] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=38, tail=38,step=36, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971992271209] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=40, tail=40, step:40
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+[time 3971992418284] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=40, tail=42, step:40
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=56======step=56=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+[time 3971992522077] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=42, tail=42,step=40, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=1====connStepCache=52==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=60======step=60=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=58==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=58======step=58=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=58==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=58======step=58=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+[time 3971992640533] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=42, tail=44, step:42
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=58==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=58======step=58=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=58==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=58======step=58=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=56==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+[time 3971992779825] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=46, tail=46, step:44
+[time 3971992884644] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=46, tail=46,step=44, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971993081586] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=48, tail=48, step:48
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=1====connStepCache=58==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=66======step=66=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=64======step=64=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=66==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=66======step=66=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=66==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=66======step=66=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+==tid=1====connStepCache=60==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=68======step=68=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=66==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=66======step=66=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=1
+[time 3971993227642] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=48, tail=50, step:48
+[time 3971993329164] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=50, tail=50,step=48, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=66==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=66======step=66=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+==tid=1====connStepCache=64==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3971993444775] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=50, tail=52, step:50
+mon_counter=0
+mon_counter=0
+[time 3971993585957] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=54, tail=54, step:52
+[time 3971993689316] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=54, tail=54,step=52, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=1====connStepCache=66==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=74======step=74=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=699040==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=74==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=74======step=74=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=2
+[time 3971993885528] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=56, tail=56, step:56
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971994030959] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=56, tail=58, step:56
+[time 3971994142843] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=58, tail=58,step=56, slice < SlicePerChunk:0
+mon_counter=0
+==tid=0====connStepCache=74==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=74======step=74=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=72==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=72======step=72=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=1====connStepCache=68==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=76======step=76=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=2
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=74==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=74======step=74=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=74==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=74======step=74=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+[time 3971994256909] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=58, tail=60, step:58
+mon_counter=0
+mon_counter=0
+[time 3971994398356] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=62, tail=62, step:60
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=1
+[time 3971994503103] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=62, tail=62,step=60, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971994699963] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=64, tail=64, step:64
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971994846524] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=64, tail=66, step:64
+[time 3971994960674] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=66, tail=66,step=64, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3971995075885] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=66, tail=68, step:66
+mon_counter=0
+mon_counter=0
+[time 3971995216191] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=70, tail=70, step:68
+[time 3971995319533] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=70, tail=70,step=68, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971995518975] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=72, tail=72, step:72
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971995662124] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=72, tail=74, step:72
+[time 3971995774866] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=74, tail=74,step=72, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3971995890587] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=74, tail=76, step:74
+mon_counter=0
+mon_counter=0
+[time 3971996030228] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=78, tail=78, step:76
+[time 3971996134053] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=78, tail=78,step=76, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971997009828] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=80, tail=80, step:80
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971997156445] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=80, tail=82, step:80
+[time 3971997269876] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=80, tail=82,step=80, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3971997386791] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=82, tail=84, step:82
+mon_counter=0
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+[time 3971997527850] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=86, tail=86, step:84
+[time 3971997631207] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=86, tail=86,step=84, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=3
+==tid=0====connStepCache=80==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=80======step=80=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=4
+==tid=0====connStepCache=82==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=82======step=82=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971997886747] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=88, tail=88, step:88
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=874144====dstIx=874144==
+mon_counter=0
+[time 3971998011617] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=88, tail=90, step:88
+mon_counter=0
+mon_counter=1
+[time 3971998095749] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=88, tail=90,step=88, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=88==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=88======step=88=====StepPerSlice=2====PeerIndex=0====srcIx=699040====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3971998340837] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=92, tail=92, step:90
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=90==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=90======step=90=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=1
+[time 3971998481585] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=94, tail=94, step:92
+[time 3971998584522] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=94, tail=94,step=92, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3971999076755] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=96, tail=96, step:96
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=98==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=98======step=98=====StepPerSlice=2====PeerIndex=0====srcIx=874144====dstIx=874144==
+[time 3971999220758] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=96, tail=98, step:96
+mon_counter=0
+mon_counter=1
+[time 3971999305256] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=96, tail=98,step=96, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3971999452340] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=98, tail=100, step:98
+==tid=0====connStepCache=98==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=98======step=98=====StepPerSlice=2====PeerIndex=0====srcIx=699040====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3971999695726] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=102, tail=102, step:100
+[time 3971999797561] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=102, tail=102,step=100, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=96==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=96======step=96=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=96==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=96======step=96=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=98==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=98======step=98=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=98==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=98======step=98=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=96==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=96======step=96=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=96==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=96======step=96=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+==tid=0====connStepCache=98==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=98======step=98=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+    426.5    2.46    1.64      0mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3972016209904] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=104, tail=104, step:104
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=874144====dstIx=874144==
+mon_counter=0
+[time 3972016338630] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=104, tail=106, step:104
+mon_counter=0
+mon_counter=1
+[time 3972016419624] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=104, tail=106,step=104, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=106==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=106======step=106=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=114==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=114======step=114=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=104==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=104======step=104=====StepPerSlice=2====PeerIndex=0====srcIx=699040====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3972016681663] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=108, tail=108, step:106
+mon_counter=0
+mon_counter=0
+[time 3972016819808] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=110, tail=110, step:108
+[time 3972016922586] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=110, tail=110,step=108, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3972017124972] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=112, tail=112, step:112
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=874144====dstIx=874144==
+mon_counter=0
+[time 3972017248930] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=112, tail=114, step:112
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3972017329082] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=112, tail=114,step=112, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=112==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=112======step=112=====StepPerSlice=2====PeerIndex=0====srcIx=699040====dstIx=699040==
+mon_counter=0
+mon_counter=1
+[time 3972017584503] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=116, tail=116, step:114
+mon_counter=0
+mon_counter=0
+[time 3972017723864] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=118, tail=118, step:116
+[time 3972017828213] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=118, tail=118,step=116, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=120==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=120======step=120=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+==tid=0====connStepCache=120==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=120======step=120=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+==tid=0====connStepCache=120==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=120======step=120=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=2
+==tid=0====connStepCache=122==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=122======step=122=====StepPerSlice=2====PeerIndex=0====srcIx=175104====dstIx=175104==
+mon_counter=0
+==tid=0====connStepCache=122==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=122======step=122=====StepPerSlice=2====PeerIndex=0====srcIx=0====dstIx=0==
+mon_counter=1
+mon_counter=0
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=120==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=120======step=120=====StepPerSlice=2====PeerIndex=0====srcIx=349520====dstIx=349520==
+==tid=0====connStepCache=120==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=120======step=120=====StepPerSlice=2====PeerIndex=0====srcIx=524624====dstIx=524624==
+mon_counter=0
+mon_counter=0
+mon_counter=1
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3972018072633] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=120, tail=120, step:120
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+[time 3972018215943] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=120, tail=122, step:120
+[time 3972018312240] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=122, tail=122,step=120, slice < SlicePerChunk:0
+mon_counter=0
+mon_counter=0
+[time 3972018428704] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:0, offset:0, head=122, tail=124, step:122
+mon_counter=0
+mon_counter=0
+[time 3972018567022] After waitPeer [channel 0] [stepSize 524288] [nelem 175104] [workSize 87552] [buffSizes 4194304] slice:1, offset:87552, head=126, tail=126, step:124
+[time 3972018669959] lice < SlicePerChunk [channel 0] [SlicePerChunk 2] [nelem 175104] [sliceSize 87552] [buffSizes 4194304] slice:2, offset:175104, head=126, tail=126,step=124, slice < SlicePerChunk:0
+    426.8    2.46    1.64      0
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 1.63838 
+#
+
+===== Done 0 =====
+run.sh: line 80: MPIRUN: command not found

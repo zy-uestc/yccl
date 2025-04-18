@@ -1,0 +1,235 @@
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl/src'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+make[2]: Entering directory '/data3/czy/nccl_origin/nccl/src/device'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+make[2]: Leaving directory '/data3/czy/nccl_origin/nccl/src/device'
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl/src'
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl-tests/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl-tests/src'
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl-tests/src'
+===== Round 0 =====
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+# nThread 1 nGpus 1 minBytes 1048576 maxBytes 1048576 step: 2(factor) warmup iters: 5 iters: 1 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 415551 on        lm2 device  0 [0000:5e:00] NVIDIA RTX A6000
+#  Rank  1 Group  0 Pid 415553 on        lm2 device  1 [0000:b1:00] NVIDIA RTX A6000
+#  Rank  2 Group  0 Pid 415560 on        lm2 device  2 [0000:d9:00] NVIDIA RTX A6000
+NCCL version 2.26.2+cuda11.7
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=0==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=8======step=8=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=102
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=3==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=11======step=11=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=3==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=11======step=11=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=3==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=11======step=11=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+==tid=0====connStepCache=3==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=11======step=11=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=4
+mon_counter=0
+==tid=0====connStepCache=5==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=13======step=13=====StepPerSlice=1====PeerIndex=0====srcIx=131072====dstIx=131072==
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+==tid=0====connStepCache=9==connStepCache + (isSendNotRecv ? NCCL_STEPS : 0)=17======step=17=====StepPerSlice=1====PeerIndex=0====srcIx=262144====dstIx=262144==
+mon_counter=1
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+mon_counter=0
+     1048560         87380     float    none       0    117.2    8.95    5.97      0    114.4    9.17    6.11      0
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 6.03897 
+#
+
+===== Done 0 =====
+run.sh: line 80: MPIRUN: command not found

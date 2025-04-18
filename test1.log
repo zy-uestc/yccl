@@ -1,0 +1,102 @@
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl/src'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+Compiling  group.cc                            > /data3/czy/nccl_origin/nccl/build/obj/group.o
+make[2]: Entering directory '/data3/czy/nccl_origin/nccl/src/device'
+NVCC_GENCODE is -gencode=arch=compute_80,code=sm_80
+make[2]: Leaving directory '/data3/czy/nccl_origin/nccl/src/device'
+group.cc: In function ‘ncclResult_t groupLaunch(ncclAsyncJob*, ncclSimInfo_t*)’:
+group.cc:401:10: warning: variable ‘duration’ set but not used [-Wunused-but-set-variable]
+  401 |   double duration = 0.0;
+      |          ^~~~~~~~
+Linking    libnccl.so.2.26.2                   > /data3/czy/nccl_origin/nccl/build/lib/libnccl.so.2.26.2
+Archiving  libnccl_static.a                    > /data3/czy/nccl_origin/nccl/build/lib/libnccl_static.a
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl/src'
+make -C src build BUILDDIR=/data3/czy/nccl_origin/nccl-tests/build
+make[1]: Entering directory '/data3/czy/nccl_origin/nccl-tests/src'
+make[1]: Leaving directory '/data3/czy/nccl_origin/nccl-tests/src'
+===== Round 0 =====
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+# nThread 1 nGpus 1 minBytes 1073741824 maxBytes 1073741824 step: 2(factor) warmup iters: 5 iters: 1 agg iters: 1 validation: 1 graph: 0
+#
+# Using devices
+#  Rank  0 Group  0 Pid 2078368 on        lm2 device  0 [0000:b1:00] NVIDIA RTX A6000
+#  Rank  1 Group  0 Pid 2078369 on        lm2 device  1 [0000:d9:00] NVIDIA RTX A6000
+lm2:2078368:2078368 [0] NCCL INFO Bootstrap: Using eno1np0:101.6.42.162<0>
+lm2:2078368:2078368 [0] NCCL INFO cudaDriverVersion 12060
+lm2:2078368:2078368 [0] NCCL INFO NCCL version 2.26.2+cuda11.7
+lm2:2078369:2078369 [1] NCCL INFO cudaDriverVersion 12060
+lm2:2078369:2078369 [1] NCCL INFO Bootstrap: Using eno1np0:101.6.42.162<0>
+lm2:2078369:2078369 [1] NCCL INFO NCCL version 2.26.2+cuda11.7
+lm2:2078368:2078385 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+lm2:2078368:2078385 [0] NCCL INFO NET/IB : No device found.
+lm2:2078368:2078385 [0] NCCL INFO NET/IB : Using [RO]; OOB eno1np0:101.6.42.162<0>
+lm2:2078369:2078386 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. Using internal net plugin.
+lm2:2078368:2078385 [0] NCCL INFO NET/Socket : Using [0]eno1np0:101.6.42.162<0> [1]eno2np1:192.168.16.116<0> [2]br-3c276cd5dbc3:172.28.0.1<0> [3]br-a6624809a36c:172.29.0.1<0> [4]br-c9c33fe0d574:172.18.0.1<0> [5]br_kasm_sidecar:172.19.0.1<0> [6]veth973fe5f:fe80::889c:c1ff:feb7:8aae%veth973fe5f<0> [7]veth81be6d0:fe80::d861:a4ff:fe05:ce5e%veth81be6d0<0> [8]vetheff9b4e:fe80::2c13:16ff:fe92:39a4%vetheff9b4e<0> [9]vethf7b60d1:fe80::d01e:78ff:fe08:cce0%vethf7b60d1<0> [10]veth891ed8f:fe80::2c27:7ff:fe85:47f8%veth891ed8f<0> [11]vetha32a882:fe80::5cff:b0ff:fee6:121b%vetha32a882<0> [12]veth95faca8:fe80::a877:43ff:fea0:f8e2%veth95faca8<0> [13]veth3146836:fe80::4cce:90ff:fe11:4072%veth3146836<0> [14]veth64890e2:fe80::80c0:b4ff:fe5c:7651%veth64890e2<0> [15]veth254a7ae:fe80::bccd:c2ff:fe2f:63bc%veth254a7ae<0>
+lm2:2078368:2078385 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+lm2:2078368:2078385 [0] NCCL INFO Using network Socket
+lm2:2078369:2078386 [1] NCCL INFO NET/IB : No device found.
+lm2:2078369:2078386 [1] NCCL INFO NET/IB : Using [RO]; OOB eno1np0:101.6.42.162<0>
+lm2:2078369:2078386 [1] NCCL INFO NET/Socket : Using [0]eno1np0:101.6.42.162<0> [1]eno2np1:192.168.16.116<0> [2]br-3c276cd5dbc3:172.28.0.1<0> [3]br-a6624809a36c:172.29.0.1<0> [4]br-c9c33fe0d574:172.18.0.1<0> [5]br_kasm_sidecar:172.19.0.1<0> [6]veth973fe5f:fe80::889c:c1ff:feb7:8aae%veth973fe5f<0> [7]veth81be6d0:fe80::d861:a4ff:fe05:ce5e%veth81be6d0<0> [8]vetheff9b4e:fe80::2c13:16ff:fe92:39a4%vetheff9b4e<0> [9]vethf7b60d1:fe80::d01e:78ff:fe08:cce0%vethf7b60d1<0> [10]veth891ed8f:fe80::2c27:7ff:fe85:47f8%veth891ed8f<0> [11]vetha32a882:fe80::5cff:b0ff:fee6:121b%vetha32a882<0> [12]veth95faca8:fe80::a877:43ff:fea0:f8e2%veth95faca8<0> [13]veth3146836:fe80::4cce:90ff:fe11:4072%veth3146836<0> [14]veth64890e2:fe80::80c0:b4ff:fe5c:7651%veth64890e2<0> [15]veth254a7ae:fe80::bccd:c2ff:fe2f:63bc%veth254a7ae<0>
+lm2:2078369:2078386 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+lm2:2078369:2078386 [1] NCCL INFO Using network Socket
+lm2:2078368:2078385 [0] NCCL INFO ncclCommInitRank comm 0x5cae0c807740 rank 0 nranks 2 cudaDev 0 nvmlDev 2 busId b1000 commId 0xb6b5985a769343a4 - Init START
+lm2:2078369:2078386 [1] NCCL INFO ncclCommInitRank comm 0x642704a500d0 rank 1 nranks 2 cudaDev 1 nvmlDev 3 busId d9000 commId 0xb6b5985a769343a4 - Init START
+lm2:2078368:2078385 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+lm2:2078369:2078386 [1] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+lm2:2078368:2078385 [0] NCCL INFO Bootstrap timings total 0.004407 (create 0.000085, send 0.000498, recv 0.002324, ring 0.000235, delay 0.000002)
+lm2:2078369:2078386 [1] NCCL INFO Bootstrap timings total 0.002439 (create 0.000095, send 0.000454, recv 0.000696, ring 0.000135, delay 0.000001)
+lm2:2078368:2078385 [0] NCCL INFO comm 0x5cae0c807740 rank 0 nRanks 2 nNodes 1 localRanks 2 localRank 0 MNNVL 0
+lm2:2078368:2078385 [0] NCCL INFO Channel 00/02 : 0 1
+lm2:2078368:2078385 [0] NCCL INFO Channel 01/02 : 0 1
+lm2:2078368:2078385 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1
+lm2:2078368:2078385 [0] NCCL INFO P2P Chunksize set to 131072
+lm2:2078368:2078385 [0] NCCL INFO Check P2P Type intraNodeP2pSupport 0 directMode 0
+lm2:2078369:2078386 [1] NCCL INFO comm 0x642704a500d0 rank 1 nRanks 2 nNodes 1 localRanks 2 localRank 1 MNNVL 0
+lm2:2078369:2078386 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0
+lm2:2078369:2078386 [1] NCCL INFO P2P Chunksize set to 131072
+lm2:2078368:2078394 [0] NCCL INFO [Proxy Service] Device 0 CPU core 40
+lm2:2078369:2078393 [1] NCCL INFO [Proxy Service] Device 1 CPU core 42
+lm2:2078368:2078396 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 40
+lm2:2078369:2078395 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 42
+lm2:2078369:2078386 [1] NCCL INFO NCCL_PROTO set by environment to Simple
+lm2:2078369:2078386 [1] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+lm2:2078369:2078386 [1] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+lm2:2078368:2078385 [0] NCCL INFO NCCL_PROTO set by environment to Simple
+lm2:2078368:2078385 [0] NCCL INFO Enabled NCCL Func/Proto/Algo Matrix:
+     Function |       LL     LL128    Simple   |          Tree           Ring  CollNetDirect   CollNetChain           NVLS       NVLSTree            PAT  
+    Broadcast |        0         0         1   |             1              1              1              1              1              1              1  
+       Reduce |        0         0         1   |             1              1              1              1              1              1              1  
+    AllGather |        0         0         1   |             1              1              1              1              1              1              1  
+ReduceScatter |        0         0         1   |             1              1              1              1              1              1              1  
+    AllReduce |        0         0         1   |             1              1              1              1              1              1              1  
+
+lm2:2078368:2078385 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+lm2:2078368:2078385 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+lm2:2078368:2078385 [0] NCCL INFO CC Off, workFifoBytes 1048576
+lm2:2078369:2078386 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+lm2:2078369:2078386 [1] NCCL INFO ncclCommInitRank comm 0x642704a500d0 rank 1 nranks 2 cudaDev 1 nvmlDev 3 busId d9000 commId 0xb6b5985a769343a4 - Init COMPLETE
+lm2:2078369:2078386 [1] NCCL INFO Init timings - ncclCommInitRank: rank 1 nranks 2 total 0.13 (kernels 0.00, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.03, graphs 0.00, connections 0.01, rest 0.00)
+lm2:2078368:2078385 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+lm2:2078368:2078385 [0] NCCL INFO ncclCommInitRank comm 0x5cae0c807740 rank 0 nranks 2 cudaDev 0 nvmlDev 2 busId b1000 commId 0xb6b5985a769343a4 - Init COMPLETE
+lm2:2078368:2078385 [0] NCCL INFO Init timings - ncclCommInitRank: rank 0 nranks 2 total 0.13 (kernels 0.00, alloc 0.08, bootstrap 0.00, allgathers 0.00, topo 0.03, graphs 0.00, connections 0.01, rest 0.00)
+#
+#                                                              out-of-place                       in-place          
+#       size         count      type   redop    root     time   algbw   busbw #wrong     time   algbw   busbw #wrong
+#        (B)    (elements)                               (us)  (GB/s)  (GB/s)            (us)  (GB/s)  (GB/s)       
+lm2:2078368:2078397 [0] NCCL INFO Channel 00 : 0[2] -> 1[3] via SHM/direct/direct
+lm2:2078368:2078397 [0] NCCL INFO Channel 01 : 0[2] -> 1[3] via SHM/direct/direct
+lm2:2078369:2078398 [1] NCCL INFO Channel 00 : 1[3] -> 0[2] via SHM/direct/direct
+lm2:2078369:2078398 [1] NCCL INFO Channel 01 : 1[3] -> 0[2] via SHM/direct/direct
+lm2:2078368:2078397 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+lm2:2078369:2078398 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+  1073741824     134217728     float    none      -1   118952    9.03    4.51      0   118972    9.03    4.51      0
+lm2:2078368:2078499 [0] NCCL INFO comm 0x5cae0c807740 rank 0 nranks 2 cudaDev 0 busIbusIdd b1000 - Destroy COMPLETE
+lm2:2078369:2078498 [1] NCCL INFO comm 0x642704a500d0 rank 1 nranks 2 cudaDev 1  d9000 - Destroy COMPLETE
+# Out of bounds values : 0 OK
+# Avg bus bandwidth    : 4.51296 
+#
+
+===== Done 0 =====
+run.sh: line 80: MPIRUN: command not found

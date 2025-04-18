@@ -62,6 +62,12 @@ struct ncclShmemData {
   alignas(16) union {
     unpackShmem unpack;
   } devicePlugin;
+
+  // for monitor
+  unsigned long long bytesSent[MAXCHANNELS];  // 各通道累计发送字节数
+  unsigned long long bytesPreSent[MAXCHANNELS];  // 各通道累计发送字节数
+  unsigned long long lastPrintTime;           // 上次打印时间戳
+  double totalSendTime[MAXCHANNELS];           // 上次打印时间戳
 };
 
 extern __shared__ ncclShmemData ncclShmem;
@@ -349,6 +355,31 @@ __device__ __forceinline__ void ncclKernelMain(struct ncclDevKernelArgs const* a
 
   while (ncclShmem.aborted == 0) {
     if (tid == 0) ncclShmem.comm.workStarted[ncclShmem.channelId] = (ncclShmem.channel.workCounter += ncclShmem.nWorks);
+    // 在 genericOp 函数末尾的打印逻辑调整如下：
+    // if (tid == 0&&ncclShmem.comm.rank==0) {
+    //   unsigned long long currentTime = clock64();
+      
+    //   unsigned long long elapsed_cycles  = currentTime - ncclShmem.lastPrintTime;
+    //   // clock_rate:1800000 kHz = 1.8GHz
+    //   int clockRateKHz = 1800000;
+    //   const unsigned long long interval_cycles = 0.01*1e3*clockRateKHz; // 10ms（1.8 GHz时钟）
+    //   if (elapsed_cycles  >= interval_cycles) {
+    //     // 计算实际经过的秒数
+    //     double elapsed_s = (double)elapsed_cycles / (interval_cycles);
+    //     // 获取当前通道的统计值并原子重置
+    //     unsigned long long bytesSent = ncclShmem.bytesSent[ncclShmem.channelId];
+    //     double rateGBs = (bytesSent / 1e9) / elapsed_s;
+    //     printf("[GPU %d][Channel %d] Send Rate: %.2f GB/s, Data: %.2f GB, elapsed_s:%.2f s\n",
+    //           ncclShmem.comm.rank,
+    //           ncclShmem.channelId,
+    //           rateGBs,
+    //           bytesSent / 1e9,
+    //           elapsed_s); // 显示实际发送的MB数
+    //     // 更新时间戳
+    //     atomicExch(&ncclShmem.bytesSent[ncclShmem.channelId], 0ULL);
+    //     ncclShmem.lastPrintTime = currentTime;
+    //   }
+    // }
     if (0 <= SpecializedFnId && ncclShmem.funcId == (unsigned)SpecializedFnId) {
       SpecializedRunWorkBatch().run();
     } else {
@@ -371,6 +402,25 @@ __device__ __forceinline__ void ncclKernelMain(struct ncclDevKernelArgs const* a
     ncclShmem.comm.workCompleted[ncclShmem.channelId] = ncclShmem.channel.workCounter;
     ((ncclDevCommAndChannels*)ncclShmem.args.comm)->channels[ncclShmem.channelId].workCounter = ncclShmem.channel.workCounter;
   }
+
+  // for (int peerIndex = 0; peerIndex < sizeof(ncclShmem.channel.peers); peerIndex++) {
+  //   struct ncclDevChannelPeer* peer = ncclShmem.channel.peers[peerIndex];
+  //   if (peer == nullptr) continue;
+
+  //   // 遍历所有 send 连接
+  //   for (int conn = 0; conn < NCCL_MAX_CONNS; conn++) {
+  //     struct ncclConnInfo* sendConn = &peer->send[conn];
+  //     if (sendConn == nullptr) continue;
+
+  //     // 打印 NCCL_PROTO_SIMPLE 对应的 buffs 值
+  //     char* buff = sendConn->buffs[NCCL_PROTO_SIMPLE];
+  //     if (buff == nullptr) continue;
+  //     if (ncclShmem.channelId == 0){
+  //       printf("tid=%d,rank %d, Peer %d, Send Conn %d: buffs[SIMPLE] = %p\n",
+  //            tid,ncclShmem.comm.rank, peerIndex, conn, buff);
+  //     }
+  //   }
+  // }
 }
 
 __global__ void ncclDevKernel_Generic(ncclDevKernelArgs4K NCCL_GRID_CONSTANT const args4K);
